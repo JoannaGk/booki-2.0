@@ -82,12 +82,12 @@ body {
     display: flex;
 }
 .nav_size {
-    height: 100px;
     width: 100%;
 }
 
 .links_size {
-    width: 100%;
+    width: 100px;
+    height: 99%;
 }
 
 .link_color_1 {
@@ -257,55 +257,8 @@ body {
     padding-right: 20px;
 }
 
-.img_hebergement_1 {
-    background-image: url("./img/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-
-.img_hebergement_2 {
-    background-image: url("./img/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-
-.img_hebergement_3 {
-    background-image: url("./img/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-
-.img_hebergement_4 {
-    background-image: url("./img/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-
-.img_hebergement_5 {
-    background-image: url("./img/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    border-radius: 15px 15px 0 0;
-}
-
-.img_hebergement_6 {
-    background-image: url("./img/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+.img_hebergement {
+    object-fit: cover;
     width: 100%;
     height: 120px;
     border-radius: 15px 15px 0 0;
@@ -354,31 +307,13 @@ body {
     padding-left: 5%;
 }
 
-.img_popular_1 {
-    background-image: url("./img/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+.img_popular {
+    object-fit: cover;
     width: 35%;
     height: 160px;
     border-radius: 15px 0 0 15px;
 }
 
-.img_popular_2 {
-    background-image: url("./img/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 35%;
-    height: 160px;
-    border-radius: 15px 0 0 15px;
-}
-.img_popular_3 {
-    background-image: url("./img/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 35%;
-    height: 160px;
-    border-radius: 15px 0 0 15px;
-}
 
 /* ACTIVITIES */
 
@@ -402,7 +337,6 @@ body {
   }
   .box_activities:hover {
     cursor: pointer;
-    transform: scale(1.03);
   }
   .box_activities2356 {
     width: 100%;
@@ -411,7 +345,6 @@ body {
   }
   .box_activities2356:hover {
     cursor: pointer;
-    transform: scale(1.03);
   }
   /* fin reglage bloc */
   .title_height {
