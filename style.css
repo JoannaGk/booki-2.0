@@ -14,7 +14,41 @@ a {
     text-decoration: none;
 }
 
-/* NAVBAR */
+/* HEADER */
+
+.header {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.header_ctn_img {
+    width: 60%;
+}
+
+.header_ctn_menu {
+    width: 40%;
+}
+
+.menu_list {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu_list_item {
+    width: 50%;
+    text-align: center;
+    border-top: 3px solid transparent;
+}
+
+.menu_list_item.active {
+    color: #0065fc;
+    border-top-color: #0065fc;
+}
 
 nav {
     display: flex;
@@ -22,72 +56,71 @@ nav {
     justify-content: flex-end;
     flex-wrap: wrap;
 }
-
-nav a {
-    padding: 2rem;
-    border-top: 3px solid transparent;
+.menu_list_item a {
+    padding: 32px;   
+    display: block;
 }
 
-.logo {
-    margin-right: auto;
-}
 
-.link_1 {
+.menu_list_item:hover {
     color: #0065fc;
-    border-top: 3px solid #0065fc;
-}
-
-nav a:hover {
     border-top-color: #0065fc;
+    cursor: pointer;
 }
 
-.sub_nav {
-    display: flex;
-}
-
-.sub_nav a:hover {
-    color: #0065fc;
-}
 
 
 @media (max-width: 768px) {
-    .sub_nav {
-        flex-basis: 100%;
-        text-align: center;
+    .header_ctn_img,
+    .header_ctn_menu {
+        width: 100%;
     }
-    .sub_nav a {
-        flex-basis: 50%;
-        border-bottom: 3px solid lightgrey;
+
+    .header_img {
+        display: block;
+        margin: auto;
     }
-    .sub_nav a:hover {
-        border-bottom-color: #0065fc;
-        border-top-color: transparent;
+
+    .menu_list_item.active {
+        border-bottom: 3px solid #0065fc;
     }
+
+    .menu_list_item {
+        border-top: none;
+        border-bottom: 3px solid #f2f2f2;
+    }
+
+    .menu_list_item:hover {
+        border-bottom-color:#0065fc;
+        
+    }
+
 }
 
 /* BODY */
 
-.headings {
-    padding: 0 2rem;
+.padding_0_2 {
+    padding: 0 32px;
 }
 
 /* SEARCH FORM */
 
 .search_form {
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .search_form i {
-    padding: 1rem 1.2rem;
-    background-color: #f2f2f2;
-    border-radius: 1rem 0 0 1rem;
+    padding: 16px 16.8px;
+    background-color: #0065fc;
+    color: #f2f2f2;
+    border-radius: 16px 0 0 16px;
 }
 
 .search_form input {
-    padding-right: 3rem;
+    padding-right: 48px;
     border: 1px solid #f2f2f2;
-    flex-basis: 16rem;
+    flex-basis: 256px;
 }
 
 .search_form input::placeholder {
@@ -98,10 +131,9 @@ nav a:hover {
 .search_form button {
     background-color: #0065fc;
     color: white;
-    font-size: 1rem;
     font-weight: bold;
-    border-radius: 0 1rem 1rem 0;
-    padding: 0 1.5rem;
+    border-radius: 0 16px 16px 0;
+    padding: 0 16px;
     border: none;
     cursor: pointer;
 }
@@ -113,7 +145,7 @@ nav a:hover {
 /* RESPONSIVE SEARCH FORM */
 
 @media (max-width: 768px) {
-    .search_form .search_text {
+    .search_text {
         display: none;
     }
 
@@ -128,16 +160,16 @@ nav a:hover {
 /* FILTERS */
 
 .filter {
-    border: 2px solid lightgrey;
-    border-radius: 2rem;
+    border: 1px solid lightgrey;
+    border-radius: 40px;
 }
 
 .filters_list {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 32px;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .filter_list h1 {
@@ -146,45 +178,53 @@ nav a:hover {
 .filter .fas {
     color:#0065fc;
     background-color: lightblue;
-    padding: 1rem;
+    padding: 16px;
     border-radius: 50%;
 }
 
 .fas.fa-child {
     color:#0065fc;
     background-color: lightblue;
-    padding: 1rem;
+    padding: 16px;
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
 }
 
 .far.fa-heart {
     color:#0065fc;
     background-color: lightblue;
-    padding: 1rem;
+    padding: 16px;
     border-radius: 50%;
 }
 
 
 .filter span {
     font-weight: bold;
-    padding: 1rem;
+    padding: 16px;
 
 }
+
+@media (max-width: 768px) {
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 
 /* MESSAGE RESULT */
 
 .message_result {
     display: flex;
     align-items: center ;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .message_result .fas {
     color: #0065fc;
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
     border: 1px solid #d9d9d9;
     border-radius: 50%;
     display: flex;
@@ -192,34 +232,40 @@ nav a:hover {
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .message_result {
+        display: flex;
+    }
+}
+
 /* HOTEL LIST */
 
-.hotel_list {
+.hotel_ctn {
     display: flex;
-    gap: 1rem;
+    gap: 16px;
 }
 
-.hotel_list > div {
+.hotel_ctn > div {
     background-color: #f2f2f2;
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 16px;
+    border-radius: 16px;
 }
 
-.hotel_list .city {
+.hotel_ctn .city {
     flex-basis: 65%;
 }
 
-.hotel_list .city a {
+.hotel_ctn .city a {
     font-weight: bold;
 }
 
-.hotel_list .popular {
+.hotel_ctn .popular {
     flex-basis: 35%;
 }
 
 
 @media (max-width: 768px) {
-    .hotel_list {
+    .hotel_ctn {
         flex-direction: column-reverse;
     }
 }
@@ -230,9 +276,9 @@ nav a:hover {
 .city_hotel_list{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 16px;
     justify-content: space-around;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .city_hotel_list div {
@@ -244,12 +290,12 @@ nav a:hover {
 .hotel_list .popular_flex {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 100px;
     flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
-    .hotel_list .popular_flex {
+    .popular_flex {
         flex-direction: column;
     }
 }
@@ -258,12 +304,12 @@ nav a:hover {
 
 .hotel_card {
     background-color: white;
-    border-radius: 1rem;
-    padding: 0.5rem;
+    border-radius: 16px;
+    padding: 8px;
     box-shadow: 0 0 10px;
     flex-grow: 1;
     flex-basis: 30%;
-    min-width: 15rem;
+    min-width: 240px;
 }
 
 .hotel_card h3,
@@ -272,11 +318,11 @@ nav a:hover {
 .popular_card_description h3,
 .popular_card_description p,
 .popular_card_description div {
-    margin: 0.2rem;
+    margin: 0.32px;
 }
 .hotel_card img {
-    border-radius: 1rem 1rem 0 0;
-    height: 10rem;
+    border-radius: 16px 16px 0 0;
+    height: 160px;
     width: 100%;
     object-fit: cover;
 }
@@ -307,26 +353,30 @@ nav a:hover {
 
 .popular h3,
 .city h3 {
-    margin-top: 0.5rem;
+    margin-top: 8px;
 }
 
 .hotel_popular_card {
     background-color: white;
-    border-radius: 1rem;
-    padding: 0.5rem;
+    border-radius: 16px;
+    padding: 8px;
     box-shadow: 0 0 10px;
     flex-grow: 1;
     display: flex;
-    min-width: 15rem;
-    max-height: 10rem;
+    min-width: 240px;
+    max-height: 140px;
+    height: 25%;
+    margin-bottom: 10%;
+    width: 100%;
 }
 
 .hotel_popular_card img {
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 16px 0 0 16px;
     height: auto;
     object-fit: cover;
-    width: 25%;
-    margin-right: 0.5rem;
+    width: 40%;
+    margin-right: 8px;
+    max-height: 100%;
 }
 
 .popular_card_description {
@@ -452,9 +502,31 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-    .box_activities .box_activities2356 {
-        display: flex;
+    .title_activities{
+        align-content: center;
+    }
+    .container_activities {
         flex-direction: column;
+        height: 100%;
+    }
+    .box_activities {
+        width: 100%;
+        height: 50%;
+    }
+    .container_activities {
+        width: 100%;
+        height: 50%;
+    }
+    .container_activities2356 {
+        width: 100%;
+        height: 50%;
+    }
+    .img_activities_1, .img_activities_3, .img_activities_4, .img_activities_5, .img_activities_6 {
+        width: 100%;
+        height: max-content;
+    }
+    .img_activities_2 {
+        width: 100%;
     }
 }
 
@@ -464,7 +536,19 @@ footer {
     background-color: #f2f2f2;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     font-size: smaller;
-    padding: 1rem;
+    padding: 16px;
+}
+.footer_ctn {
+    width: 85%;
+}
+.footer_menu {
+    list-style-type: none;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
 }
